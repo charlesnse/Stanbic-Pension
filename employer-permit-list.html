@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.5.0/css/select.dataTables.min.css">
+
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS LINKS END -->
+
+    <!-- ICONS LINK -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Title -->
+    <title>Stanbic IBTC </title>
+
+</head>
+
+<body class="g-sidenav-show bg-gray-100">
+
+    <div class="min-height-300 bg-secondary position-absolute w-100"></div>
+
+    <!-- SIDE BAR -->
+
+    <aside
+        class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4"
+        id="sidenav-main">
+
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+                aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0 m-auto text-center" href="dashboard.html"><img width="500"
+                    src="assets/img/logo.png" class="navbar-brand-img" alt="main_logo">
+            </a>
+        </div>
+
+        <hr class="horizontal dark mt-0">
+
+        <div class="collapse navbar-collapse  w-auto h-auto mt-4" id="sidenav-collapse-main">
+
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a href="/duplicate-period.html" class="nav-link active">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ri-pie-chart-line text-primary text-sm opacity-10 pb-2"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Duplicate Period</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/invalid-contribution.html" class="nav-link">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ri-grid-fill text-primary text-sm opacity-10 pb-2"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Invalid Contribution</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/posting-log.html" class="nav-link">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ri-macbook-fill text-primary text-sm opacity-10 pb-1"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Posting Log</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/process-log.html" class="nav-link">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ri-folder-open-fill text-primary text-sm opacity-10 pb-1"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Process Log</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#Resolution" class="nav-link" aria-controls="Resolution"
+                        role="button" aria-expanded="false">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ri-refresh-line text-primary text-sm opacity-10 pb-1"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Resolution</span>
+                    </a>
+                    <div class="collapse" id="Resolution">
+
+                        <ul class="nav ms-4">
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="employer-permit-list.html">
+                                    <span class="sidenav-normal"> Employer Permit List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="employer-nofee-list.html">
+                                    <span class="sidenav-normal"> Employer No-Fee List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link " href="fund-list.html">
+                                    <span class="sidenav-normal"> Fund List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link " href="holiday-list.html">
+                                    <span class="sidenav-normal"> Holiday List </span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#ControlList" class="nav-link" aria-controls="ControlList"
+                        role="button" aria-expanded="false">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ri-share-forward-fill text-primary text-sm opacity-10 pb-1"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Control List</span>
+                    </a>
+                    <div class="collapse" id="ControlList">
+
+                        <ul class="nav ms-4">
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="employer-permit-list.html">
+                                    <span class="sidenav-normal"> Employer Permit List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="employer-nofee-list.html">
+                                    <span class="sidenav-normal"> Employer No-Fee List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link " href="fund-list.html">
+                                    <span class="sidenav-normal"> Fund List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link " href="holiday-list.html">
+                                    <span class="sidenav-normal"> Holiday List </span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#Aprovers" class="nav-link" aria-controls="Aprovers"
+                        role="button" aria-expanded="false">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ri-edit-box-fill text-primary text-sm opacity-10 pb-2"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Approvers</span>
+                    </a>
+                    <div class="collapse" id="Aprovers">
+
+                        <ul class="nav ms-4">
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="add-new.html">
+                                    <span class="sidenav-normal"> Add New</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="config-posting.html">
+                                    <span class="sidenav-normal"> Config Posting </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="config-posting-approval.html">
+                                    <span class="sidenav-normal"> Config Posting Approval </span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#ProcessSetup" class="nav-link" aria-controls="ProcessSetup"
+                        role="button" aria-expanded="false">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ri-share-forward-fill text-primary text-sm opacity-10 pb-1"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Process Setup</span>
+                    </a>
+                    <div class="collapse" id="ProcessSetup">
+
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/repost-date.html" class="nav-link">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ri-dashboard-3-fill text-primary text-sm opacity-10 pb-1"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Repost Date</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/repost.html" class="nav-link">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ri-arrow-go-forward-fill text-primary text-sm opacity-10 pb-1"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Repost</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="sidenav-footer mx-3 my-3">
+            <a href="/index.html" class="btn btn-dark btn-sm w-100 mb-3 py-3">Logout</a>
+        </div>
+
+    </aside>
+
+    <!-- SIDE BAR ENDS -->
+
+    <!-- MAIN -->
+
+    <main class="main-content position-relative border-radius-lg ">
+
+        <nav class="navbar navbar-main navbar-expand-lg  px-0 mx-4 shadow-none border-radius-xl z-index-sticky "
+            id="navbarBlur" data-scroll="false">
+            <div class="container-fluid py-1 px-3">
+
+                <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
+                    <a href="javascript:;" class="nav-link p-0">
+                        <div class="sidenav-toggler-inner">
+                            <i class="sidenav-toggler-line bg-white"></i>
+                            <i class="sidenav-toggler-line bg-white"></i>
+                            <i class="sidenav-toggler-line bg-white"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+
+                    <div class="ms-md-auto pe-md-3 d-md-flex align-items-center d-none">
+                        <p class="text-sm text-light mx-3"> Report Date: <span class="fw-light">24-Jan-2023</span></p>
+                        <p class="text-sm text-light"> Report Date: <span class="fw-light">24-Jan-2023</span></p>
+                    </div>
+
+                    <ul class="navbar-nav  justify-content-end">
+
+                        <li class="nav-item d-xl-none ps-3 d-flex align-items-center mx-3">
+                            <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line bg-white"></i>
+                                    <i class="sidenav-toggler-line bg-white"></i>
+                                    <i class="sidenav-toggler-line bg-white"></i>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item d-flex align-items-center">
+                            <a href="#" class="nav-link text-white font-weight-bold px-0">
+                                <i class="fa fa-user me-1"></i>
+                                <span class="d-sm-inline">INTNIGEVA170793</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="container-fluid py-4">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row d-flex justify-contents-center">
+
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card mb-4">
+                                <div class="card-body p-3">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="numbers">
+                                                <p class="text-sm mb-2 text-uppercase font-weight-bold">UPLOADED</p>
+                                                <h5 class="font-weight-bolder">
+                                                    1,560
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-end">
+                                            <div
+                                                class="icon icon-shape bg-gradient-info shadow-info text-center rounded-circle">
+                                                <i class="ri-upload-cloud-fill text-lg opacity-10 text-light"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card  mb-4">
+                                <div class="card-body p-3">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="numbers">
+                                                <p class="text-sm mb-0 text-uppercase font-weight-bold">Rejected</p>
+                                                <h5 class="font-weight-bolder">
+                                                    2,300
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-end">
+                                            <div
+                                                class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
+                                                <i class="ri-close-circle-fill text-lg opacity-10"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card  mb-4">
+                                <div class="card-body p-3">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="numbers">
+                                                <p class="text-sm mb-0 text-uppercase font-weight-bold">Pending
+                                                    Approvals</p>
+                                                <h5 class="font-weight-bolder">
+                                                    3,462
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-end">
+                                            <div
+                                                class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
+                                                <i class="ri-error-warning-fill text-lg opacity-10"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card  mb-4">
+                                <div class="card-body p-3">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="numbers">
+                                                <p class="text-sm mb-0 text-uppercase font-weight-bold">Validated</p>
+                                                <h5 class="font-weight-bolder">
+                                                    3,430
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-end">
+                                            <div
+                                                class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
+                                                <i class="ri-checkbox-circle-fill text-lg opacity-10"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card  mb-4">
+                                <div class="card-body p-3">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="numbers">
+                                                <p class="text-sm mb-0 text-uppercase font-weight-bold">Posted</p>
+                                                <h5 class="font-weight-bolder">
+                                                    3,430
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-end">
+                                            <div
+                                                class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
+                                                <i class="ri-file-list-fill text-lg opacity-10" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card px-3">
+
+                        <div class="card-header mb-0">
+                            <h5 class="mb-0 font-weight-bold">Employer Permit List</h5>
+                            </p>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-flush" id="datatable-search">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Employer No.</th>
+                                        <th>Employer Name</th>
+                                        <th>Date</th>
+                                        <th>User ID</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td class="text-sm font-weight-normal">Databound</td>
+                                        <td class="text-sm font-weight-normal">Databound</td>
+                                        <td class="text-sm font-weight-normal">Databound</td>
+                                        <td class="text-sm font-weight-normal">Databound</td>
+                                        <td class="text-sm font-weight-normal">Databound</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-sm font-weight-normal">Databound</td>
+                                        <td class="text-sm font-weight-normal">Databound</td>
+                                        <td class="text-sm font-weight-normal">Databound</td>
+                                        <td class="text-sm font-weight-normal">Databound</td>
+                                        <td class="text-sm font-weight-normal">Databound</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- MAIN END -->
+
+    <!-- SCRIPTS  -->
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/plugins/datatable.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- DATATABLE -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.5.0/js/dataTables.select.min.js"></script>
+    <script
+        src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
+
+    <script>
+        $('#datatable-search').DataTable({
+            'columnDefs': [{
+                'targets': 0,
+                'checkboxes': {
+                    'selectRow': true
+                }
+            }],
+            'select': {
+                'style': 'multi'
+            },
+            order: [[1, 'asc']]
+        });
+    </script>
+
+</body>
+
+</html>
